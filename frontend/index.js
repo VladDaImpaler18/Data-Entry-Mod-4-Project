@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(newQuestionObj => {
                 newQuestion = Question.create(newQuestionObj, newQuestionObj.category.title); //after this, go to show page
-                if(!Object.values(Category.all).includes(newQuestionObj.category.title)){ Category.all.push(newQuestionObj.category.title) }
+                console.log(`the title is!: ${newQuestionObj.category.title}`);
+                if(!Object.values(Category.all).includes(newQuestionObj.category)){ Category.all.push(newQuestionObj.category) }
+                debugger;
                 loadForm(newQuestion);
             })
             .catch(error=> {
