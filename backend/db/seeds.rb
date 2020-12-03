@@ -14,11 +14,11 @@ q = c.questions.build(
 )
 q.dummy << "Organism X is negatively affected by the relationship and organism Y is positively affected." << "Both organisms are positively affected by the relationship." << "Both organisms are negatively affected by the relationship"
 
-q.diagram.attach(
-    io: File.open(Rails.root.join('storage', 'seed_pictures','two_interactions.jpg')),
-    filename: 'two_interactions.jpg',
-    content_type: "image/jpg"
-  )
+#q.diagram.attach(
+#    io: File.open(Rails.root.join('storage', 'seed_pictures','two_interactions.jpg')),
+#    filename: 'two_interactions.jpg',
+#    content_type: "image/jpg"
+#  )
 q.save
 # Works great
 
@@ -37,11 +37,11 @@ q = c.questions.build(
 
 q.dummy << "It will increase, only." << "It will decrease, only." << "It will decrease and then increase."
 
-q.diagram.attach(
-  io: File.open(Rails.root.join('storage', 'seed_pictures','food_chain.jpg')),
-  filename: 'food_chain.jpg',
-  content_type: "image/jpg"
-)
+#q.diagram.attach(
+#  io: File.open(Rails.root.join('storage', 'seed_pictures','food_chain.jpg')),
+#  filename: 'food_chain.jpg',
+#  content_type: "image/jpg"
+#)
 q.save
 
 q = c.questions.build(
